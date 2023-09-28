@@ -1,31 +1,29 @@
 public class Conta {
+
     private int numero;
     private String titular;
     private float saldo;
 
-    public Conta(int numero, String titular, float saldo){
-        this.numero = numero;
-        this.titular = titular;
-        this.saldo = saldo;
+    public Conta() {
+        this.numero = 0;
+        this.titular = "";
+        this.saldo = 0;
     }
 
-
-    public int getNumero(){
-        return 0;
+    public int getNumero() {
+        return this.numero;
     }
 
-    public float sacar(float valor){
-        return 0;
+    public void sacar(float valor) {
+        this.saldo -= valor;
     }
 
-    public void depositar(float valor){
-
+    public void depositar(float valor) {
+        this.saldo += valor;
     }
 
-    public String toString(){
-        return "";
+    @Override
+    public String toString() {
+        return "Número: " + this.numero + ", Titular: " + this.titular + ", Saldo: " + this.saldo;
     }
-
-
-
 }
